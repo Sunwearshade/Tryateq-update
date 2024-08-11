@@ -1,0 +1,30 @@
+.developer-menu-button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 20px 30px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.developer-menu {
+  list-style: none;
+  padding: 0;
+  display: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  position: absolute;
+  width: 200px; /* Ajusta el ancho según sea necesario */
+  right: 20px; /* Alinea el menú con el botón */
+  top: 60px; /* Ajusta la posición según sea necesario */
+  z-index: 1000;
+}
+
+.developer-menu li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.developer-menu li:last-child {
+  border-bottom: none;
+}

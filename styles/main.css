@@ -1,0 +1,298 @@
+/* Importar fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* Reset some basic elements */
+body, h1, h2, h3, p, ul, form, div, label, input, textarea, button {
+  margin: 0;
+  padding: 0;
+  font-family: 'Porsche Next', sans-serif; /* Usa una fuente similar a la de Porsche */
+}
+
+/* General Styles */
+body {
+  background-color: #f9f9f9; /* Fondo blanco */
+  color: #000; /* Texto negro */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center; /* Centra el contenido del encabezado */
+  align-items: center;
+  flex-direction: column;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centra el menú de navegación */
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto; /* Asegura que el footer esté en la parte inferior */
+}
+
+/* Estilos para listas */
+ul {
+  list-style: disc inside; /* Cambia el estilo de los bullets */
+  margin: 20px 0;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 250px;
+  height: auto; /* Cambia la altura para que sea automática */
+  max-height: 400px; /* Establece una altura máxima */
+  background-color: #333;
+  color: #000; /* Cambia el color del texto a negro */
+  padding: 20px;
+  display: none; /* Inicialmente oculto */
+  z-index: 1000;
+  overflow-y: auto; /* Agrega un scroll si el contenido excede la altura máxima */
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+  color: #000; /* Cambia el color de los enlaces a negro */
+  text-decoration: none;
+}
+
+.sidebar-toggle {
+  display: none; /* Oculto por defecto */
+}
+
+.sidebar-active .sidebar {
+  display: block;
+}
+
+/* Contact Page specific styles */
+.contact-page .sidebar {
+  display: block; /* Asegura que la barra lateral esté visible en la página de contacto */
+}
+
+.contact-page .sidebar-toggle {
+  display: block;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Form styles */
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+form input, form textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.contact-page h2 {
+  text-align: center;
+}
+
+.services-page h2 {
+  text-align: center;
+}
+
+.solutions-page {
+  text-align: center;
+}
+
+.index-page {
+  text-align: center;
+}
+
+/* Estilos globales */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+  padding: 0 1rem;
+  text-align: justify;
+  animation: fadeIn 2s ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+/* Animación de fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo de imágenes en index.html */
+#about-us img {
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Estilos para la lista de servicios */
+.service-list {
+  max-width: 800px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 20px; /* Relleno */
+  background-color: #f9f9f9; /* Color de fondo */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para el párrafo y la lista dentro del contenedor */
+.service-list p,
+.service-list ul {
+  font-size: 1.1rem; /* Tamaño de fuente */
+  margin: 0 0 1.5rem 0; /* Márgenes */
+  padding: 0; /* Relleno */
+  text-align: justify; /* Justificación del texto */
+  animation: fadeIn 0.5s ease-out forwards; /* Animación de fade-in */
+}
+
+/* Estilos para la lista */
+.service-list ul {
+  list-style: disc; /* Estilo de bullets */
+  padding-left: 20px; /* Relleno a la izquierda */
+}
+
+/* Estilos para los elementos de la lista */
+.service-list ul li {
+  margin-bottom: 10px; /* Márgenes inferiores */
+}
+
+/* Estilo del footer */
+footer {
+  background-color: #000; /* Fondo negro */
+  color: #fff; /* Texto blanco por defecto */
+  text-align: center; /* Centra el texto del footer */
+  padding: 5px 0; /* Reduce el padding para hacer el footer más delgado */
+  margin-top: auto; /* Asegura que el footer esté en la parte inferior */
+  font-size: 0.9rem; /* Tamaño de fuente más pequeño */
+  display: flex; /* Usa flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido del footer */
+  align-items: center; /* Alinea verticalmente el contenido del footer */
+}
+
+/* Estilo específico para el contenido dentro del footer */
+footer .footer-content {
+  color: #000; /* Texto negro */
+}
+
+/* Estilo específico para el párrafo dentro del footer */
+footer p {
+  margin: 0; /* Elimina el margen */
+  color: #000; /* Texto negro */
+}
