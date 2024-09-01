@@ -1,7 +1,11 @@
 document.getElementById('send-btn').addEventListener('click', sendMessage);
+document.getElementById('user-input').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        sendMessage();
+    }
+});
 
 let chatActive = true;
-let sessionId = generateSessionId();
 
 function sendMessage() {
     const userInput = document.getElementById('user-input').value;
@@ -11,7 +15,7 @@ function sendMessage() {
     document.getElementById('user-input').value = '';
 
     if (!chatActive) {
-        addMessage("El chat ha finalizado. Tu ID de consulta es: " + sessionId, 'bot-message');
+        addMessage("El chat ha finalizado.", 'bot-message');
         return;
     }
 
@@ -31,12 +35,15 @@ function addMessage(text, className) {
 
 function generateResponse(input) {
     const responses = {
-        "hola": "¡Hola! ¿Cómo puedo ayudarte hoy?",
-        "¿cómo estás?": "Estoy bien, gracias por preguntar. ¿Y tú?",
-        "¿cuál es tu nombre?": "Soy un modelo de IA creado para ayudarte con tus preguntas.",
-        "¿Qué es un bot?": "es un sistema de respuesta automatizada",
-        "¿Qué puedes hacer?": "cualquier respuesta que quieras como respuesta?",
-        "gg": "papa",
+        "hola": "¡Hola! ¿En qué puedo asistirte hoy?",
+        "¿cómo estás?": "Estoy aquí para ayudarte. ¿En qué necesitas ayuda?",
+        "¿cuál es tu nombre?": "Soy un asistente virtual de [Nombre de la Empresa].",
+        "¿qué es un bot?": "Un bot es un programa que puede responder a preguntas y ayudar con tareas comunes.",
+        "¿qué servicios ofrecen?": "Ofrecemos soluciones de automatización y desarrollo de bots personalizados para negocios.",
+        "¿cómo puedo contactarlos?": "Puedes contactarnos a través de nuestro formulario en línea o llamándonos al [número de teléfono].",
+        "¿cuáles son sus horarios?": "Estamos disponibles de lunes a viernes de 9:00 AM a 6:00 PM.",
+        "gracias": "¡De nada! Si tienes alguna otra pregunta, no dudes en preguntar.",
+        "adiós": "¡Hasta luego! Estamos aquí si necesitas más ayuda.",
         // Añadir más respuestas predefinidas aquí
     };
 
@@ -48,7 +55,4 @@ function generateResponse(input) {
 
     return responses[input.toLowerCase()] || defaultResponse;
 }
-
-function generateSessionId() {
-    return 'ID-' + Math.random().toString(36).substr(2, 9).toUpperCase();
-}
+ß
