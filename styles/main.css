@@ -267,7 +267,7 @@ footer {
   padding: 0 20px;
 }
 
-#about-us img {
+img {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
@@ -277,7 +277,7 @@ footer {
   margin-top: 20px; /* Agregar margen superior a las imágenes para separarlas del texto */
 }
 
-#about-us img:hover {
+img:hover {
   transform: scale(1.05); /* Aumenta el tamaño de la imagen */
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Agrega una sombra al pasar el mouse */
 }
