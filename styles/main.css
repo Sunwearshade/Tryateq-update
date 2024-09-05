@@ -178,36 +178,6 @@ main p {
   animation-delay: 0.2s;
 }
 
-/* Estilos de la barra lateral */
-.sidebar {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  width: 200px;
-  background-color: #ffffff;
-  color: #333333;
-  padding: 20px;
-  border: 1px solid #dddddd;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  animation: fadeInRight 0.5s ease-in-out;
-}
-
-.sidebar h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #1a1a1a;
-}
-
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar ul li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-
 /* Estilos del footer */
 footer {
   background-color: #1a1a1a;
@@ -336,8 +306,19 @@ img:hover {
 }
 
 #success-message {
+  display: none; /* Por defecto está oculto */
   text-align: center;
   margin-top: 20px;
-  font-size: 1.2rem;
-  color: #1a1a1a;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #25D366; /* Verde WhatsApp */
+  border-radius: 10px;
+  padding: 15px 20px;
+  width: 80%;
+  max-width: 350px;
+  margin: 20px auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombra moderna */
+  border-left: 6px solid #128C7E; /* Borde izquierdo más prominente */
+  animation: fadeIn 0.5s ease-out;
 }

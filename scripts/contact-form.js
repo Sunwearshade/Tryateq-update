@@ -1,9 +1,9 @@
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Previene el envío del formulario de manera tradicional
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+    event.preventDefault(); // Evitar recargar la página al enviar el formulario
 
-    // Aquí deberías manejar el envío del formulario con AJAX o similar
+    // Ocultar el formulario
+    document.getElementById("contact-form").style.display = "none";
 
-    // Muestra el mensaje de éxito y oculta el formulario
-    document.getElementById('contact-form').style.display = 'none';
-    document.getElementById('success-message').style.display = 'block';
+    // Mostrar el mensaje de éxito
+    document.getElementById("success-message").classList.remove("hidden");
 });
