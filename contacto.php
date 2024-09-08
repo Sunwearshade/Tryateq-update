@@ -6,6 +6,9 @@
     <title>Contacto - Tryateq</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/buttons.css">
+    <?php
+        require_once $_SERVER['DOCUMENT_ROOT'] . '/Mtec/php/insert_form.php';
+    ?>
 
 </head>
 <body class="contact-page">
@@ -15,14 +18,14 @@
             <ul class="nav-list">
                 <li><a href="soluciones.html">Soluciones</a></li>
                 <li><a href="servicios.html">Servicios</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="contacto.php">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main class="main-contact">
         <h2>Contáctanos</h2>
         <div class="contact-form-container">
-            <form id="contact-form" class="contact-form">
+            <form id="contact-form" class="contact-form" method="post" action="">
                 <div class="form-group">
                     <label for="name">Nombre:</label>
                     <input type="text" id="name" name="name" class="form-input" required>
@@ -40,13 +43,13 @@
                     <input type="tel" id="phone" name="phone" class="form-input" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">tu reto/meta:</label>
+                    <label for="message">Tu objetivo/meta:</label>
                     <textarea id="message" name="message" class="form-textarea" required></textarea>
                 </div>
-                <button type="submit" class="submit-button">Enviar</button>
+                <button type="submit" class="submit-button" name="subirInfo">Enviar</button>
             </form>
             <!-- Mensaje de éxito fuera del formulario -->
-            <div id="success-message" class="hidden">
+            <div id="success-message" style="display: none;" class="hidden">
                 <p>¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.</p>
             </div>
         </div>
@@ -54,16 +57,7 @@
     <footer class="footer">
         <p>Todos los derechos reservados Tryateq</p>
     </footer>
-        <script src="scripts/menu.js"></script>
-    <script src="scripts/contact-form.js"></script>
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", function (event) {
-            event.preventDefault(); 
+    <script src="scripts/menu.js"></script>
 
-            document.getElementById("contact-form").style.display = "none";
-
-            document.getElementById("success-message").style.display = "block";
-        });
-    </script>
 </body>
 </html>
