@@ -26,11 +26,27 @@ function sendMessage() {
 function addMessage(text, className) {
     const messageContainer = document.createElement('div');
     messageContainer.className = `message ${className}`;
-    messageContainer.textContent = text;
+
+    const messageText = document.createElement('div');
+    messageText.textContent = text;
+
+    const messageTime = document.createElement('div');
+    messageTime.className = 'message-time';
+    messageTime.textContent = getCurrentTime();
+
+    messageContainer.appendChild(messageText);
+    messageContainer.appendChild(messageTime);
 
     const chatOutput = document.getElementById('chat-output');
     chatOutput.appendChild(messageContainer);
     chatOutput.scrollTop = chatOutput.scrollHeight;
+}
+
+function getCurrentTime() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    return `${hours}:${minutes}`;
 }
 
 function generateResponse(input) {
