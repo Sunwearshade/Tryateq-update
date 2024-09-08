@@ -14,9 +14,9 @@
   background-color: #fff;
   border: 1px solid #ddd;
   position: absolute;
-  width: 200px; /* Ajusta el ancho según sea necesario */
-  right: 20px; /* Alinea el menú con el botón */
-  top: 60px; /* Ajusta la posición según sea necesario */
+  width: 200px; 
+  right: 20px; 
+  top: 60px; 
   z-index: 1000;
 }
 

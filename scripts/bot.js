@@ -55,4 +55,3 @@ function generateResponse(input) {
 
     return responses[input.toLowerCase()] || defaultResponse;
 }
-ß
