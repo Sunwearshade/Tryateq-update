@@ -4,13 +4,48 @@
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f0f0f0; 
     background-image: url('../images/Fondo-whatsapp.jpg');
     background-size: cover;
     background-position: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     display: none;
     position: relative;
+}
+
+#chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #333; 
+    background-color: #202c33; 
+    color: #ffffff; 
+    position: relative; 
+}
+
+#chat-header h3 {
+    margin: 0;
+    font-size: 1.2rem; 
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+}
+
+#chat-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+#chat-controls img {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#chat-controls img:hover {
+    opacity: 0.8; 
 }
 
 #chat-output {
@@ -32,11 +67,11 @@
 }
 
 .user-message {
-    background-color: #25D366; 
+    background-color: #128C7E; 
     color: #ffffff;
     align-self: flex-end;
     text-align: right;
-    border: 1px solid #1DA851;
+    border: 1px solid #0d6e6b; 
 }
 
 .bot-message {
@@ -55,23 +90,39 @@
     right: 10px;
 }
 
+#typing-indicator {
+    font-size: 0.9rem;
+    color: #888888;
+    margin: 5px 0;
+}
+
+.hidden {
+    display: none;
+}
+
 #chat-input-container {
     display: flex;
+    align-items: center;
 }
 
 #user-input {
     flex: 1;
     padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px 0 0 4px;
-    border-right: none;
+    border: 1px solid #333; 
+    border-radius: 4px;
+    background-color: #333; 
+    color: #ffffff; 
 }
 
 #send-btn {
-    background-color: #25D366; 
-    color: #ffffff;
-    padding: 10px 20px;
+    padding: 10px;
     border: none;
-    border-radius: 0 4px 4px 0;
+    background-color: #128C7E; 
+    color: #ffffff;
+    border-radius: 4px;
     cursor: pointer;
+}
+
+#send-btn:hover {
+    background-color: #0d6e6b; 
 }

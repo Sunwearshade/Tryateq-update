@@ -19,8 +19,14 @@ function sendMessage() {
         return;
     }
 
-    const response = generateResponse(userInput);
-    setTimeout(() => addMessage(response, 'bot-message'), 500);
+    const typingIndicator = document.getElementById('typing-indicator');
+    typingIndicator.classList.remove('hidden');
+
+    setTimeout(() => {
+        typingIndicator.classList.add('hidden');
+        const response = generateResponse(userInput);
+        setTimeout(() => addMessage(response, 'bot-message'), 500);
+    }, 1000); 
 }
 
 function addMessage(text, className) {
