@@ -64,9 +64,11 @@ function generateResponse(input) {
         "¿qué servicios ofrecen?": "Ofrecemos soluciones de automatización y desarrollo de bots personalizados para negocios.",
         "¿cómo puedo contactarlos?": "Puedes contactarnos a través de nuestro formulario en línea o llamándonos al [número de teléfono].",
         "¿cuáles son sus horarios?": "Estamos disponibles de lunes a viernes de 9:00 AM a 6:00 PM.",
+        "¿Cuál es el precio": "Cada proyecto es unico, contactanos para realizar una valoracion de acuerdo a tus necesidades",
+        "Precio": "Cada proyecto es unico, contactanos para realizar una evaluacion de acuerdo a tus necesidades",
+        "ok": "Espero haber sido de ayuda",
         "gracias": "¡De nada! Si tienes alguna otra pregunta, no dudes en preguntar.",
         "adiós": "¡Hasta luego! Estamos aquí si necesitas más ayuda.",
-        // Añadir más respuestas predefinidas aquí
     };
 
     const defaultResponse = "Lo siento, no entiendo la pregunta. ¿Puedes reformularla?";
