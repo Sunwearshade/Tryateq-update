@@ -43,6 +43,7 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  flex-direction: row;
   gap: 30px;
 }
 
@@ -51,6 +52,7 @@ nav ul li a {
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
+  margin-bottom: 0;
 }
 
 nav ul li a:hover {
@@ -192,19 +194,59 @@ footer {
 }
 
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
+  body {
+    padding-top: 120px; /* Aumentar el espacio en la parte superior para evitar que el contenido quede oculto */
+    padding-bottom: 40px; /* Ajustar padding-bottom para el footer fijo */
   }
-  
-  .sidebar {
-    width: 90%;
-    right: 5%;
-    bottom: 5%;
+
+  header {
+    padding: 15px;
+    height: auto; /* Asegúrate de que el header tenga altura suficiente para su contenido */
   }
-  
+
+  .main-index {
+    margin-top: 20px; /* Añadir un margen superior adicional si es necesario */
+  }
+
   main {
     padding: 20px 10px;
+  }
+
+  .footer {
+    padding: 10px 0;
+  }
+
+  nav ul {
+    flex-direction: row; /* Cambiar a horizontal en pantallas pequeñas */
+    justify-content: center; /* Centrar el menú */
+    gap: 15px;
+  }
+
+  nav ul li {
+    margin-bottom: 0; /* Eliminar margen inferior */
+  }
+
+  .main-index h2 {
+    font-size: 1.5rem;
+  }
+
+  .main-index img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .service-list, .contact-form-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .form-textarea {
+    height: 120px;
+  }
+
+  .submit-button {
+    padding: 8px 16px;
   }
 }
 
