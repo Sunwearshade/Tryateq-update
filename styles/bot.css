@@ -47,6 +47,9 @@
     border-radius: 10px;
     max-width: 80%;
     position: relative;
+    word-wrap: break-word; 
+    overflow-wrap: break-word; 
+    margin-bottom: 15px; 
 }
 
 .user-message {
