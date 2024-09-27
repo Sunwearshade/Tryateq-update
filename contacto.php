@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="styles/buttons.css">
     <?php
         require_once $_SERVER['DOCUMENT_ROOT'] . '/Mtec/php/insert_form.php';
+
+        // Generar el token CSRF si no existe
+        if (empty($_SESSION['csrf_token'])) {
+            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+        }
     ?>
+
 
 </head>
 <body class="contact-page">
@@ -25,7 +31,8 @@
     <main class="main-contact">
         <h2>Contáctanos</h2>
         <div class="contact-form-container">
-            <form id="contact-form" class="contact-form" method="post" action="">
+            <form id="contact-form" class="contact-form" method="post" action="contacto.php">
+                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                 <div class="form-group">
                     <label for="name">Nombre:</label>
                     <input type="text" id="name" name="name" class="form-input" required>
@@ -40,7 +47,7 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Número de Teléfono:</label>
-                    <input type="tel" id="phone" name="phone" class="form-input" required>
+                    <input type="tel" id="phone" name="phone" class="form-input" pattern="^[0-9]{10}" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Tu objetivo/meta:</label>
@@ -57,7 +64,7 @@
     <footer class="footer">
         <p>Todos los derechos reservados Tryateq</p>
     </footer>
-    <script src="scripts/menu.js"></script>
+    <script src="scripts/main.js"></script>
 
 </body>
 </html>
