@@ -195,17 +195,17 @@ footer {
 
 @media (max-width: 768px) {
   body {
-    padding-top: 120px; /* Aumentar el espacio en la parte superior para evitar que el contenido quede oculto */
-    padding-bottom: 40px; /* Ajustar padding-bottom para el footer fijo */
+    padding-top: 120px; 
+    padding-bottom: 40px; 
   }
 
   header {
     padding: 15px;
-    height: auto; /* Asegúrate de que el header tenga altura suficiente para su contenido */
+    height: auto; 
   }
 
   .main-index {
-    margin-top: 20px; /* Añadir un margen superior adicional si es necesario */
+    margin-top: 20px; 
   }
 
   main {
@@ -217,13 +217,13 @@ footer {
   }
 
   nav ul {
-    flex-direction: row; /* Cambiar a horizontal en pantallas pequeñas */
-    justify-content: center; /* Centrar el menú */
+    flex-direction: row; 
+    justify-content: center; 
     gap: 15px;
   }
 
   nav ul li {
-    margin-bottom: 0; /* Eliminar margen inferior */
+    margin-bottom: 0; 
   }
 
   .main-index h2 {
