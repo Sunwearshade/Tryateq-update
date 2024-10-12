@@ -6,16 +6,14 @@
     <title>Contacto - Tryateq</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/buttons.css">
+    <script src="scripts/contact-form.js"></script>
     <?php
-        require_once $_SERVER['DOCUMENT_ROOT'] . '/Mtec/php/insert_form.php';
-
         // Generar el token CSRF si no existe
+        session_start();
         if (empty($_SESSION['csrf_token'])) {
             $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
         }
     ?>
-
-
 </head>
 <body class="contact-page">
     <header class="header">
@@ -31,7 +29,7 @@
     <main class="main-contact">
         <h2>Contáctanos</h2>
         <div class="contact-form-container">
-            <form id="contact-form" class="contact-form" method="post" action="contacto.php">
+            <form id="contact-form" class="contact-form" method="post" onsubmit="subirFormulario(event)">
                 <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
                 <div class="form-group">
                     <label for="name">Nombre:</label>
@@ -39,7 +37,7 @@
                 </div>
                 <div class="form-group">
                     <label for="Enterprises">Empresa:</label>
-                    <input type="Enterprises" id="Enterprises" name="Enterprises" class="form-input" required>
+                    <input type="text" id="Enterprises" name="Enterprises" class="form-input" required>
                 </div>
                 <div class="form-group">
                     <label for="email">Correo:</label>
@@ -47,14 +45,15 @@
                 </div>
                 <div class="form-group">
                     <label for="phone">Número de Teléfono:</label>
-                    <input type="tel" id="phone" name="phone" class="form-input" pattern="^[0-9]{10}" required>
+                    <input type="tel" id="phone" name="phone" class="form-input" pattern="^[0-9]{10}$" required>
                 </div>
                 <div class="form-group">
                     <label for="message">Tu objetivo/meta:</label>
                     <textarea id="message" name="message" class="form-textarea" required></textarea>
                 </div>
-                <button type="submit" class="submit-button" name="subirInfo">Enviar</button>
+                <button type="submit" class="submit-button">Enviar</button>
             </form>
+
             <!-- Mensaje de éxito fuera del formulario -->
             <div id="success-message" style="display: none;" class="hidden">
                 <p>¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.</p>
@@ -64,7 +63,5 @@
     <footer class="footer">
         <p>Todos los derechos reservados Tryateq</p>
     </footer>
-    <script src="scripts/main.js"></script>
-
 </body>
 </html>
