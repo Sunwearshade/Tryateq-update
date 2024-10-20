@@ -362,3 +362,33 @@ img:hover {
   border-left: 6px solid #128C7E; 
   animation: fadeIn 0.5s ease-out;
 }
+
+.service-list ul li {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555555;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease; 
+}
+
+.service-list ul li:hover {
+  transform: scale(1.3); 
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4); 
+}
+
+.list-item {
+  text-align: justify;
+  opacity: 0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.list-item.active {
+  opacity: 1; 
+  transform: scale(1.1); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
