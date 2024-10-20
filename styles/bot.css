@@ -129,3 +129,11 @@
 #send-btn:hover {
     background-color: #0d6e6b; 
 }
+
+#bot-prompt {
+    text-align: center; 
+    display: block; 
+    width: 100%; 
+    margin-top: 20px; 
+}
+
