@@ -20,8 +20,9 @@
         <h1><a href="index.html">Tryateq</a></h1>
         <nav class="nav">
             <ul class="nav-list">
-                <li><a href="soluciones.html">Soluciones</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="soluciones.html">Servicios</a></li>
+                <li><a href="servicios.html">soluciones</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
             </ul>
         </nav>
