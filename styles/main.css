@@ -348,11 +348,11 @@ img:hover {
 
 #success-message {
   display: none; 
-  text-align: center;
+  text-align: left;
   margin-top: 20px;
   font-size: 1rem;
   font-weight: 500;
-  color: #ffffff;
+  color: #000000;
   border-radius: 10px;
   padding: 15px 20px;
   width: 80%;
@@ -421,4 +421,47 @@ img:hover {
 
 .service-list ul li.active .palomitas {
   opacity: 1;
+}
+
+.whatsapp-message {
+  display: none; 
+  background-color: #e1ffc7; 
+  border-radius: 10px;
+  padding: 15px;
+  max-width: 300px; 
+  position: relative; 
+  margin: 20px auto;
+  font-size: 0.9rem;
+  color: #000;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  border-left: 3px solid #128C7E; 
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.whatsapp-message p {
+  margin: 0; 
+}
+
+.whatsapp-checks {
+  position: absolute;
+  bottom: 5px; 
+  right: 10px;
+  width: 20px;
+}
+
+.whatsapp-checks img {
+  width: 100%;
+  height: auto;
+}
+
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(10px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }

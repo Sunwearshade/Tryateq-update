@@ -54,13 +54,14 @@
                 </div>
                 <button type="submit" class="submit-button">Enviar</button>
             </form>
-
-            <!-- Mensaje de éxito fuera del formulario -->
-            <div id="success-message" style="display: none;" class="hidden">
-                <p>¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.</p>
             </div>
         </div>
     </main>
+    <div id="success-message" class="whatsapp-message">
+                <p>¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.</p>
+                <div class="whatsapp-checks">
+                    <img src="./images/palomitas.png" alt="Palomitas">
+                </div>
     <footer class="footer">
         <p>Todos los derechos reservados Tryateq</p>
     </footer>
