@@ -300,7 +300,10 @@ img:hover {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #ffffff;
+  background-image: url('../images/Fondo-whatsapp.jpg'); /* Agrega el fondo aquí */
+  background-size: cover; /* Ajusta la imagen al tamaño del div */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
@@ -359,8 +362,10 @@ img:hover {
   max-width: 350px;
   margin: 20px auto;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
+  background-color: #e1ffc7; /* Color verde para el mensaje */
   border-left: 6px solid #128C7E; 
   animation: fadeIn 0.5s ease-out;
+  position: relative; /* Asegura la posición para colocar la imagen de fondo */
 }
 
 .service-list ul li {
@@ -453,6 +458,7 @@ img:hover {
   width: 100%;
   height: auto;
 }
+
 
 
 @keyframes fadeInUp {
