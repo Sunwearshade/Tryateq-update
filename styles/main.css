@@ -380,6 +380,7 @@ img:hover {
   display: none; 
   text-align: left;
   margin-top: 20px;
+  margin-left: 20px;
   font-size: 1rem;
   font-weight: 500;
   color: #000000; 
@@ -387,12 +388,12 @@ img:hover {
   padding: 15px 20px;
   width: 80%;
   max-width: 350px;
-  margin: 20px auto;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); 
   background-color: #ffffff; 
   animation: fadeIn 0.5s ease-out;
-  position: relative; 
+  position: relative;
 }
+
 
 .service-list ul li {
   font-size: 1rem;

@@ -6,9 +6,8 @@
     <title>Contacto - Tryateq</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/buttons.css">
-    <script src="scripts/contact-form.js"></script>
+    <script src="scripts/contact-form.js" defer></script> <!-- Añadir defer aquí -->
     <?php
-        // Generar el token CSRF si no existe
         session_start();
         if (empty($_SESSION['csrf_token'])) {
             $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -22,7 +21,7 @@
             <ul class="nav-list">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="soluciones.html">Servicios</a></li>
-                <li><a href="servicios.html">soluciones</a></li>
+                <li><a href="servicios.html">Soluciones</a></li>
                 <li><a href="contacto.php">Contacto</a></li>
             </ul>
         </nav>
@@ -55,11 +54,8 @@
                 <button type="submit" class="submit-button">Enviar</button>
             </form>
             <div id="success-message" class="whatsapp-message">
-               <p>¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.</p>
-             <div class="whatsapp-checks">
-            <img src="./images/palomitas.png" alt="Palomitas">
-        </div> 
-    </div>
+               ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.
+            </div>
         </div>
     </main>
 

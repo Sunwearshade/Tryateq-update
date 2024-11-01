@@ -25,7 +25,7 @@ function subirFormulario(event) {
     .then(data => {
         if (data.error) {
             console.error(data.error);
-            alert(data.error); // Puedes manejar los errores como quieras
+            alert(data.error); 
         } else {
             document.getElementById('contact-form').style.display = "none";
             document.getElementById('success-message').style.display = "block";
@@ -35,3 +35,4 @@ function subirFormulario(event) {
         console.error('Error al guardar:', error);
     });
 }
+
