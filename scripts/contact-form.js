@@ -29,10 +29,13 @@ function subirFormulario(event) {
         } else {
             document.getElementById('contact-form').style.display = "none";
             document.getElementById('success-message').style.display = "block";
+
+            // Mostrar el mensaje de "Formulario enviado"
+            const sentMessage = document.getElementById('sent-message');
+            sentMessage.style.display = "block"; // Asegúrate de que este mensaje se muestre
         }
     })
     .catch(error => {
         console.error('Error al guardar:', error);
     });
 }
-

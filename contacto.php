@@ -6,7 +6,7 @@
     <title>Contacto - Tryateq</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/buttons.css">
-    <script src="scripts/contact-form.js" defer></script> <!-- Añadir defer aquí -->
+    <script src="scripts/contact-form.js" defer></script>
     <?php
         session_start();
         if (empty($_SESSION['csrf_token'])) {
@@ -53,8 +53,15 @@
                 </div>
                 <button type="submit" class="submit-button">Enviar</button>
             </form>
+            <div id="sent-message" class="user-sent-message">
+                 <div class="whatsapp-checks">
+                    <img id="check-icon" src="./images/palomitasgris.png" alt="Palomitas grises">
+                  </div>
+                  Formulario enviado
+                   </div>
+
             <div id="success-message" class="whatsapp-message">
-               ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.
+                ¡Gracias por contactarnos! Nos pondremos en contacto contigo pronto.
             </div>
         </div>
     </main>
