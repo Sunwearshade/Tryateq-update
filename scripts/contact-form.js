@@ -1,5 +1,5 @@
 function subirFormulario(event) {
-    event.preventDefault(); // Evitar que el formulario se envíe de forma tradicional
+    event.preventDefault(); 
 
     const nombre = document.getElementById('name').value.trim();
     const empresa = document.getElementById('Enterprises').value.trim();
@@ -28,11 +28,14 @@ function subirFormulario(event) {
             alert(data.error); 
         } else {
             document.getElementById('contact-form').style.display = "none";
-            document.getElementById('success-message').style.display = "block";
 
-            // Mostrar el mensaje de "Formulario enviado"
             const sentMessage = document.getElementById('sent-message');
-            sentMessage.style.display = "block"; // Asegúrate de que este mensaje se muestre
+            sentMessage.style.display = "block";
+
+            setTimeout(() => {
+                document.getElementById('success-message').style.display = "block"; 
+                document.getElementById('check-icon').src = './images/palomitas.png'; 
+            }, 1000);
         }
     })
     .catch(error => {
