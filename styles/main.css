@@ -14,7 +14,7 @@ body {
   display: flex;
   flex-direction: column;
   padding-top: 80px; 
-  padding-bottom: 60px; 
+
 }
 
 header {
@@ -63,7 +63,7 @@ main {
   flex: 1;
   padding: 40px 20px;
   text-align: center;
-  margin-bottom: 60px; 
+
 }
 
 main h2 {
@@ -186,7 +186,7 @@ footer {
   color: #ffffff;
   text-align: center;
   padding: 15px 0;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
