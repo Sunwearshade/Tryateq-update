@@ -1,5 +1,5 @@
 function subirFormulario(event) {
-    event.preventDefault(); 
+    event.preventDefault();
 
     const nombre = document.getElementById('name').value.trim();
     const empresa = document.getElementById('Enterprises').value.trim();
@@ -25,7 +25,7 @@ function subirFormulario(event) {
     .then(data => {
         if (data.error) {
             console.error(data.error);
-            alert(data.error); 
+            alert(data.error);
         } else {
             document.getElementById('contact-form').style.display = "none";
 
@@ -34,7 +34,12 @@ function subirFormulario(event) {
 
             setTimeout(() => {
                 document.getElementById('success-message').style.display = "block"; 
-                document.getElementById('check-icon').src = './images/palomitas.png'; 
+                document.getElementById('check-icon').src = './images/palomitas.png';
+
+                // Reproducir el sonido de notificación
+                const audio = new Audio('./sounds/notification.mp3');
+                audio.play();
+
             }, 1000);
         }
     })
