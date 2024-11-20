@@ -6,6 +6,13 @@
     <title>Servicios - Tryateq</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/buttons.css">
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body class="services-page">
     <header class="header">
@@ -46,12 +53,26 @@
                     <span class="palomitas hidden"><img src="./images/palomitas.png" alt="palomitas de WhatsApp"></span>
                 </li>
             </ul>
-            
         </div>
+        
+        <div id="map"></div>
     </main>
     <footer class="footer">
         <p>Todos los derechos reservados Tryateq</p>
     </footer>
+    <script>
+        function initMap() {
+            const mapOptions = {
+                zoom: 12,
+                center: { lat: 19.432608, lng: -99.133209 }, // Ejemplo sepa la verga como se use 
+            };
+
+            const map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="./scripts/serviceslist.js"></script>
 </body>
-<script src="./scripts/serviceslist.js"></script>
 </html>

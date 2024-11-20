@@ -91,6 +91,7 @@ main p {
   margin: 0 auto 30px auto;
   text-align: justify;
   color: #555555;
+  padding: 20px;
 }
 
 .service-list {
@@ -566,4 +567,10 @@ img:hover {
 #success-message {
   display: none;
   animation: slideInFromLeft 0.4s ease-out;
+}
+
+.map {
+  height: 400px;
+  width: 100%;
+  margin-top: 30px; /* Separación para el mapa */
 }

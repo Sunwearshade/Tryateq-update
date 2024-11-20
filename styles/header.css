@@ -1,0 +1,25 @@
+.login-button {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #ff6600; 
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #e55a00;
+    transform: scale(1.05);
+  }
+  
+  .login-button:active {
+    transform: scale(0.98);
+  }
+  

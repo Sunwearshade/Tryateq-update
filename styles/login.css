@@ -1,0 +1,68 @@
+/* login.css */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+  }
+  
+  .login-container {
+    width: 90%;
+    max-width: 400px;
+    max-height: 350px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .login-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333333;
+  }
+  
+  .login-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #555555;
+    text-align: left;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .login-form input:focus {
+    outline: none;
+    border-color: #ff6600;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+  }
+  
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #e55a00;
+  }
+  
