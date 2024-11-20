@@ -29,10 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             header('Location: admin-dashboard.html');
             exit();
         } else {
-            echo '<script>alert("Contraseña incorrecta."); window.location.href = "login.html";</script>';
+            echo '<script>alert("Contraseña incorrecta."); window.location.href = "login.php";</script>';
         }
     } else {
-        echo '<script>alert("Correo no registrado."); window.location.href = "login.html";</script>';
+        echo '<script>alert("Correo no registrado."); window.location.href = "login.php";</script>';
     }
 }
 $conn->close();

@@ -6,7 +6,8 @@
   <title>Dashboard de Administrador</title>
   <link rel="stylesheet" href="../styles/main.css">
   <link rel="stylesheet" href="../styles/admin.css">
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWDTtdeyPgQFB5hp2iJ9LsJHn3QKIpIPM&libraries=places&callback=initMap" async defer></script>
+  <script src="../scripts/mapa.js"></script>
 </head>
 <body class="admin-dashboard">
   <header class="header">
@@ -14,7 +15,7 @@
     <nav class="nav">
       <ul class="nav-list">
         <li><a href="admin-dashboard.html">Panel Admin</a></li>
-        <li><a href="Admin/ConsultarRegistrosdeContacto.html">Consultar Registros</a></li>
+        <li><a href="ConsultarRegistrosdeContacto.html">Consultar Registros</a></li>
         <li>
           <form action="../php/admin/cerrar_sesion.php" method="POST">
             <button type="submit" class="cerrar-sesion-button">Cerrar sesión</button>
@@ -26,25 +27,27 @@
 
   <main class="admin-main">
     <h2>Consulta de Locales</h2>
-    <div id="map"></div>
-    <h2>Registrar Solución</h2>
-    <form id="register-solution-form">
-      <input type="text" name="name" placeholder="Nombre del local" required>
-      <input type="text" name="address" placeholder="Dirección" required>
-      <textarea name="description" placeholder="Descripción de la solución" required></textarea>
-      <input type="file" name="image" required>
-      <button type="submit">Registrar Solución</button>
-    </form>
-
-    <h2>Buscar Registros</h2>
-    <input type="text" id="search-bar" placeholder="Buscar registros por nombre">
-    <div id="results"></div>
-
-    <h2>Mensajes de Contacto</h2>
-    <div id="contact-forms">
+    <p>Selecciona un local para registrar una solución</p>
+    <div id="map" style="height: 500px;"></div>
+    <div id="solucion" style="display: none;">
+      <h2>Registrar Solución</h2>
+      <form id="register-solution-form">
+        <input type="text" name="name" placeholder="Nombre del local" required>
+        <input type="text" name="address" placeholder="Dirección" required>
+        <textarea name="description" placeholder="Descripción de la solución" required></textarea>
+        <input type="file" name="image" required>
+        <button type="submit">Registrar Solución</button>
+      </form>
     </div>
+    <h2>Buscar Registros</h2><br>
+      <input type="text" id="search-bar" placeholder="Buscar registros por nombre">
+      <div id="results"></div>
 
-    <button id="send-email-button">Enviar Mensaje</button>
+      <h2>Mensajes de Contacto</h2>
+      <div id="contact-forms">
+      </div>
+
+      <button id="send-email-button">Enviar Mensaje</button>
   </main>
 </body>
 </html>
