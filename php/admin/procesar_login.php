@@ -1,18 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "root"; 
-$password = ""; 
-$dbname = "tryateq";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
+require_once $_SERVER["DOCUMENT_ROOT"] . '/mtec-update/php/conn_db.php';
 
 session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
+if (isset($_POST["login-form"])){
     $email = $_POST['email'];
     $password = $_POST['password'];
 
@@ -26,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $user = $result->fetch_assoc();
 
         if ($password === $user['password']) {
-            header('Location: admin-dashboard.html');
+            header('Location: admin-dashboard.php');
             exit();
         } else {
             echo '<script>alert("Contraseña incorrecta."); window.location.href = "login.php";</script>';

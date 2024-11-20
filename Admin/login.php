@@ -16,13 +16,13 @@
   </header>
   
   <main class="login-container">
-    <form class="login-form" id="loginForm" method="POST">
+    <form class="login-form" id="loginForm" name="login-form" method="POST">
       <h2>Iniciar Sesión</h2>
       <label for="email">Correo Electrónico</label>
       <input type="email" id="email" name="email" value="prueba@ejemplo.com" required>
       <label for="password">Contraseña</label>
       <input type="password" id="password" name="password" value="123456" required>
-      <button type="submit" class="submit-button">Login</button>
+      <button type="submit" class="submit-button" name="login-form">Login</button>
     </form>
   </main>
 </body>

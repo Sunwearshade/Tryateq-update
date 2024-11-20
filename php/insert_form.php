@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once $_SERVER['DOCUMENT_ROOT'] . '/Mtec/php/conn_db.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/mtec-update/php/conn_db.php';
 
 $response = [];
 
