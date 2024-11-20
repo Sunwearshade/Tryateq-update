@@ -15,7 +15,7 @@
         <nav class="nav">
             <ul class="nav-list">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./admin-dashboard.html">Panel Admin</a></li>
+                <li><a href="./admin-dashboard.php">Panel Admin</a></li>
                 <li><a href="../php/admin/cerrar_sesion.php">Cerrar sesión</a></li>
             </ul>
         </nav>
