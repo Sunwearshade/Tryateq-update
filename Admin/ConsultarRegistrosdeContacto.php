@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/tables.css">
     <link rel="stylesheet" href="../styles/modalConsultaR.css">
-    <script defer src="../scripts/adminConsultaR.js"></script>
 </head>
 <body class="admin-contact-page">
     <header class="header">
@@ -32,59 +31,50 @@
                         <th>Correo</th>
                         <th>Teléfono</th>
                         <th>Mensaje</th>
-                        <th>Fecha</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Juan Pérez</td>
-                        <td>Empresa ABC</td>
-                        <td>juan.perez@example.com</td>
-                        <td>5551234567</td>
-                        <td>Quiero automatizar mis procesos.</td>
-                        <td>2024-11-19</td>
-                        <td>
-                            <button class="send-email-button" 
-                                    data-email="juan.perez@example.com" 
-                                    data-name="Juan Pérez">
-                                Enviar Correo
-                            </button>
-                        </td>
-                    </tr>
+                    <?php
+                    require_once $_SERVER['DOCUMENT_ROOT'] . '/mtec-update/php/conn_db.php';
+
+                    if ($conn->connect_error) {
+                        echo "<tr><td colspan='7'>Error de conexión: " . $conn->connect_error . "</td></tr>";
+                    } else {
+                        $sql = "SELECT id, nombre, correo, telefono, mensaje, empresa FROM contacto";
+                        $result = $conn->query($sql);
+
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<tr>
+                                    <td>{$row['nombre']}</td>
+                                    <td>{$row['empresa']}</td>
+                                    <td>{$row['correo']}</td>
+                                    <td>{$row['telefono']}</td>
+                                    <td>{$row['mensaje']}</td>
+                                    <td>
+                                        <button class='send-email-button' 
+                                                data-email='{$row['correo']}' 
+                                                data-name='{$row['nombre']}'>
+                                            Enviar Correo
+                                        </button>
+                                    </td>
+                                </tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='7'>No hay registros disponibles.</td></tr>";
+                        }
+                        $conn->close();
+                    }
+                    ?>
                 </tbody>
             </table>
         </div>
     </main>
-
-    <div id="email-modal" class="modal hidden">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <h2>Enviar Correo</h2>
-            <form id="email-form">
-                <label for="recipient">Para:</label>
-                <input type="email" id="recipient" name="recipient" readonly>
-                
-                <label for="subject">Asunto:</label>
-                <input type="text" id="subject" name="subject" value="Información de Contacto" required>
-                
-                <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="6" required>
-Hola [Nombre],
-
-Gracias por contactarnos. Nos encantaría ayudarle a alcanzar sus objetivos. Por favor, póngase en contacto con nosotros para agendar una reunión.
-
-Saludos,
-Equipo de Tryateq
-                </textarea>
-                
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </div>
 
     <footer class="footer">
         <p>Todos los derechos reservados Tryateq</p>
     </footer>
 </body>
 </html>
+
