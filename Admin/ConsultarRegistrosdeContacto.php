@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/tables.css">
     <link rel="stylesheet" href="../styles/modalConsultaR.css">
+    <script src="../scripts/sendEmailScript.js" defer></script>
 </head>
 <body class="admin-contact-page">
     <header class="header">
