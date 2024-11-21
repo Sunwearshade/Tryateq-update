@@ -15,7 +15,13 @@
             <ul class="nav-list">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./admin-dashboard.php">Panel Admin</a></li>
-                <li><a href="../php/admin/cerrar_sesion.php">Cerrar sesión</a></li>
+                <li><a href="ConsultarRegistrosdeContacto.php">Consultar Registros de Contacto</a></li>
+                <li><a href="ConsultarRegistrosSoluciones.php">Consultar Registros de Soluciones</a></li>
+                <li>
+                    <form action="../php/admin/cerrar_sesion.php" method="POST">
+                    <button type="submit" class="cerrar-sesion-button">Cerrar sesión</button>
+                    </form>
+                </li>
             </ul>
         </nav>
     </header>

@@ -1,13 +1,11 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="es">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard de Administrador</title>
+    <title>Consultar Registros de Soluciones - Tryateq</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/admin.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo5wI1l_9VXum-coRYNZbldktNFR45lXY&libraries=places&callback=initMap" async defer></script>
-    <script src="../scripts/mapa.js"></script>
     <?php
       require_once $_SERVER['DOCUMENT_ROOT'] . '/mtec-update/php/admin/registrar_solucion.php';
     ?>
@@ -31,23 +29,6 @@
     </header>
 
     <main class="admin-main">
-      <h2>Consulta de Locales</h2>
-      <p>Selecciona un local para registrar una solución</p>
-      <div id="map" style="height: 500px;"></div>
-      <div id="solucion" style="display: none;">
-        <h2>Registrar Solución</h2>
-        <form id="register-solution-form" method="POST">
-          <label for="name">Nombre del local:</label>
-          <input type="text" name="name" placeholder="Nombre del local" required>
-          <label for="adress">Dirección:</label>
-          <input type="text" name="address" placeholder="Dirección" required>
-          <label for="description">Descripción de la solución:</label>
-          <textarea name="description" placeholder="Descripción" required></textarea>
-          <label for="file">Imagen del local:</label>
-          <input type="file" name="image" required>
-          <button type="submit" name="registrarSolucion">Registrar Solución</button>
-        </form>
-      </div>
       <h2>Buscar Registros</h2><br>
         <input type="text" id="search-bar" placeholder="Buscar registros por nombre">
         <div id="results"></div>
