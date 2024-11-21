@@ -41,24 +41,27 @@ function initMap() {
       const solucionDiv = document.getElementById("solucion");
       const nameInput = document.querySelector("#register-solution-form input[name='name']");
       const addressInput = document.querySelector("#register-solution-form input[name='address']");
-      const imageInput = document.querySelector("#register-solution-form input[name='image']");
-      const existingImage = document.querySelector("#register-solution-form img"); 
-
+      const imageUrlInput = document.querySelector("#register-solution-form input[name='imageUrl']");
+      const existingImage = document.querySelector("#register-solution-form img");
+  
       if (existingImage) {
-        existingImage.remove();
+          existingImage.remove();
       }
-      
+  
       solucionDiv.style.display = "block";
-      nameInput.value = place.name; // Autocompletar el nombre
-      addressInput.value = place.vicinity; // Autocompletar la dirección
-
+      nameInput.value = place.name;
+      addressInput.value = place.vicinity;
+  
       if (place.photos && place.photos.length > 0) {
-        const photoUrl = place.photos[0].getUrl({ maxWidth: 400, maxHeight: 300 });
-        imageInput.type = "hidden"; // Ocultamos el campo de subir imagen manual
-        imageInput.insertAdjacentHTML('afterend', `<img src="${photoUrl}" alt="${place.name}" style="max-width: 300px; margin-top: 10px;">`);
+          const photoUrl = place.photos[0].getUrl({ maxWidth: 400, maxHeight: 300 });
+          imageUrlInput.value = photoUrl; // Guardar URL de la imagen en un campo oculto
+          imageUrlInput.insertAdjacentHTML(
+              'afterend',
+              `<img src="${photoUrl}" alt="${place.name}" style="max-width: 300px; margin-top: 10px;">`
+          );
       } else {
-        console.warn(`No hay fotos disponibles para el lugar: ${place.name}`);
+          console.warn(`No hay fotos disponibles para el lugar: ${place.name}`);
       }
-    });
-  }
+  });  
+}
   

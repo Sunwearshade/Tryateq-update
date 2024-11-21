@@ -36,7 +36,7 @@
       <div id="map" style="height: 500px;"></div>
       <div id="solucion" style="display: none;">
         <h2>Registrar Solución</h2>
-        <form id="register-solution-form" method="POST">
+        <form id="register-solution-form" method="POST" enctype="multipart/form-data">
           <label for="name">Nombre del local:</label>
           <input type="text" name="name" placeholder="Nombre del local" required>
           <label for="adress">Dirección:</label>
@@ -44,7 +44,7 @@
           <label for="description">Descripción de la solución:</label>
           <textarea name="description" placeholder="Descripción" required></textarea>
           <label for="file">Imagen del local:</label>
-          <input type="file" name="image" required>
+          <input type="hidden" name="imageUrl">
           <button type="submit" name="registrarSolucion">Registrar Solución</button>
         </form>
       </div>
