@@ -1,26 +1,19 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const emailButtons = document.querySelectorAll(".send-email-button");
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.send-email-button').forEach(button => {
+        button.addEventListener('click', () => {
+            const email = button.dataset.email;
+            const name = button.dataset.name;
 
-    emailButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            const email = button.getAttribute("data-email");
-            const name = button.getAttribute("data-name");
-
-            fetch("../php/admin/send_email.php", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ email, name })
+            fetch('../php/admin/send_email.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({ email, name })
             })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === "success") {
-                    alert("Correo enviado exitosamente.");
-                } else {
-                    alert("Error al enviar el correo: " + data.message);
-                }
-            })
-            .catch(error => console.error("Error:", error));
+            .then(response => response.text())
+            .then(data => alert(data))
+            .catch(error => console.error('Error:', error));
         });
     });
 });
-

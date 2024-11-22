@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['access_token']) || $_SESSION['access_token'] == '') {
+    header('Location: http://localhost/mtec-update/php/admin/authorize.php');
+    exit();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
