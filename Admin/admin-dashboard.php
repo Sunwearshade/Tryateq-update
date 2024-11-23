@@ -6,7 +6,7 @@
     <title>Dashboard de Administrador</title>
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/admin.css">
-    <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=places&callback=initMap" async defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADzF_1damylpSiH04bVtg9nIXd5Teeiy0&libraries=places&callback=initMap" async defer></script>
     <script src="../scripts/mapa.js"></script>
     <?php
       require_once $_SERVER['DOCUMENT_ROOT'] . '/mtec-update/php/admin/registrar_solucion.php';

@@ -26,7 +26,7 @@ if(isset($_POST['searchQuery'])) {
                     <td>{$row['nombre_local']}</td>
                     <td>{$row['direccion_local']}</td>
                     <td>{$row['descripcion']}</td>
-                    <td><img src='../images/{$row['imagen_local']}' alt='Imagen Local' width='100'></td>
+                    <td><img src='{$row['imagen_local']}' alt='Imagen Local' width='100'></td>
                 </tr>";
         }
 
